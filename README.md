@@ -244,4 +244,4 @@ func performMainThreadRunLoopSourceTask() {
 }
 ```
 
-在`performMainThreadRunLoopSourceTask()`方法中同样会先判断主线程事件源的指令池是否有内容，然后执行`MainCollectionViewController`中的刷新UI的方法，最后再次给二级线程发送事件消息，以此循环。大家可以去Github下载该示例的源码，然后可以自己试着在界面中添加一个**Stop**按钮，让事件源执行`cancel`回调函数。
+在`performMainThreadRunLoopSourceTask()`方法中同样会先判断主线程事件源的指令池是否有内容，然后执行`MainCollectionViewController`中的刷新UI的方法，最后再次给二级线程发送事件消息，以此循环。大家可以下载源码，编译环境为Xcode7.2，然后可以自己试着在界面中添加一个**Stop**按钮，让事件源执行`cancel`回调函数。
